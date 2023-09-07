@@ -127,6 +127,7 @@ func (d *Docker) StartWithCancel() (*StartedService, error) {
 			NanoCPUs: cpu,
 		},
 		ExtraHosts: getExtraHosts(d.Service, d.Caps),
+		Cgroup:     ctr.CgroupSpec(d.Service.DeviceCgroupRule),
 	}
 	hostConfig.PublishAllPorts = d.Service.PublishAllPorts
 	if len(d.Caps.DNSServers) > 0 {
