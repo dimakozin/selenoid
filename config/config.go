@@ -50,19 +50,20 @@ type State struct {
 
 // Browser configuration
 type Browser struct {
-	Image           interface{}       `json:"image"`
-	Port            string            `json:"port"`
-	Path            string            `json:"path"`
-	Tmpfs           map[string]string `json:"tmpfs,omitempty"`
-	Volumes         []string          `json:"volumes,omitempty"`
-	Env             []string          `json:"env,omitempty"`
-	Hosts           []string          `json:"hosts,omitempty"`
-	ShmSize         int64             `json:"shmSize,omitempty"`
-	Labels          map[string]string `json:"labels,omitempty"`
-	Sysctl          map[string]string `json:"sysctl,omitempty"`
-	Mem             string            `json:"mem,omitempty"`
-	Cpu             string            `json:"cpu,omitempty"`
-	PublishAllPorts bool              `json:"publishAllPorts,omitempty"`
+	Image            interface{}       `json:"image"`
+	Port             string            `json:"port"`
+	Path             string            `json:"path"`
+	Tmpfs            map[string]string `json:"tmpfs,omitempty"`
+	Volumes          []string          `json:"volumes,omitempty"`
+	Env              []string          `json:"env,omitempty"`
+	Hosts            []string          `json:"hosts,omitempty"`
+	ShmSize          int64             `json:"shmSize,omitempty"`
+	Labels           map[string]string `json:"labels,omitempty"`
+	Sysctl           map[string]string `json:"sysctl,omitempty"`
+	Mem              string            `json:"mem,omitempty"`
+	Cpu              string            `json:"cpu,omitempty"`
+	PublishAllPorts  bool              `json:"publishAllPorts,omitempty"`
+	DeviceCgroupRule string            `json:"deviceCgroupRule"`
 }
 
 // Versions configuration
